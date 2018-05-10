@@ -14,7 +14,7 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container-fluid">
-            <button type="button" class="btn btn-default">Create Ride</button>
+            <a href="createRide.php" class="btn btn-default">Create Ride</a>
         </div>
         <?php
         // put your code here
