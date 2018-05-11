@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($input_firstname)) {
         $firstname_err = "Please, enter a firstname.";
     } else {
-        $name = $input_name;
+        $firstname = $input_firstname;
     }
 
     // Validate lastname
@@ -69,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($firstname_err) && empty($lastname_err) && empty($phone_no_err && $email_err && $position_err && $password)) {
         // Prepare an insert statement
         $sql = "INSERT INTO Employee (firstname, lastname, phone_no,
-                email, position, department, password) VALUES (?, ?, ?, ?, 
-                ?, ?, ?)";
+                email, position, department, password) VALUES (?, ?, ?, ?, ?, 
+                ?, ?)";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
