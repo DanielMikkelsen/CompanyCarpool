@@ -15,6 +15,7 @@ and open the template in the editor.
     <body>
         <div class="container-fluid">
             <a href="createRide.php" class="btn btn-default">Create Ride</a>
+            <a href="createUser.php" class="btn btn-default">Create User</a>
         </div>
         <?php
         // put your code here
