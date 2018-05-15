@@ -1,5 +1,5 @@
 <?php
-// Connect to db
+// Include config file
 require_once 'dbConnect.php';
 
 // Define variables and initialize with empty values
@@ -8,6 +8,37 @@ $firstname_err = $lastname_err = $phone_no_err = $email_err = $position_err = $d
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Validate email
+    if (empty(trim($_POST["email"]))) {
+        $email_err = "Please enter a email.";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT employee_id FROM Employee WHERE email = :email";
+
+        if ($stmt = $pdo->prepare($sql)) {
+            // Bind variables to the prepared statement as parameters
+            $stmt->bindParam(':email', $param_email, PDO::PARAM_STR);
+
+            // Set parameters
+            $param_email = trim($_POST["email"]);
+
+            // Attempt to execute the prepared statement
+            if ($stmt->execute()) {
+                if ($stmt->rowCount() == 1) {
+                    $email_err = "This email is already taken.";
+                } else {
+                    $email = trim($_POST["email"]);
+                }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+        }
+
+        // Close statement
+        unset($stmt);
+    }
+
     // Validate firstname
     $input_firstname = trim($_POST["firstname"]);
     if (empty($input_firstname)) {
@@ -30,14 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $phone_no_err = "Please, enter a phone number.";
     } else {
         $phone_no = $input_phone_no;
-    }
-
-    // Validate email
-    $input_email = trim($_POST["email"]);
-    if (empty($input_email)) {
-        $email_err = "Please, enter an email.";
-    } else {
-        $email = $input_email;
     }
 
     // Validate position
@@ -65,16 +88,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $input_password;
     }
 
-    // Look for field errors before quering the db
+    // Check input errors before inserting in database
     if (empty($firstname_err) && empty($lastname_err) && empty($phone_no_err && $email_err && $position_err && $password)) {
+
         // Prepare an insert statement
         $sql = "INSERT INTO Employee (firstname, lastname, phone_no,
-                email, position, department, password) VALUES (?, ?, ?, ?, ?, 
-                ?, ?)";
+                email, position, department, password) VALUES (:firstname, :lastname, :phone_no, :email, :position, :department, :password)";
 
-        if ($stmt = mysqli_prepare($link, $sql)) {
+        if ($stmt = $pdo->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssissss", $param_firstname, $param_lastname, $param_phone_no, $param_email, $param_position, $param_department, $param_password);
+            $stmt->bindParam(':firstname', $param_firstname, PDO::PARAM_STR);
+            $stmt->bindParam(':lastname', $param_lastname, PDO::PARAM_STR);
+            $stmt->bindParam(':phone_no', $param_phone_no, PDO::PARAM_INT);
+            $stmt->bindParam(':email', $param_email, PDO::PARAM_STR);
+            $stmt->bindParam(':position', $param_position, PDO::PARAM_STR);
+            $stmt->bindParam(':department', $param_department, PDO::PARAM_STR);
+            $stmt->bindParam(':password', $param_password, PDO::PARAM_STR);
 
             // Set parameters
             $param_firstname = $firstname;
@@ -83,26 +112,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_email = $email;
             $param_position = $position;
             $param_department = $department;
-            // the pw hash ensures that user's pws are not duplicated in the table
-            $param_password = password_hash($password, PASSWORD_DEFAULT);
+            $param_password = $password;
 
             // Attempt to execute the prepared statement
-            if (mysqli_stmt_execute($stmt)) {
-                // Records created successfully. Redirect to landing page
-                header("location: index.php");
-                exit();
+            if ($stmt->execute()) {
+                // Redirect to login page
+                header("location: login.php");
             } else {
                 echo "Something went wrong. Please try again later.";
-                echo mysqli_error($link);
             }
         }
 
         // Close statement
-        mysqli_stmt_close($stmt);
+        unset($stmt);
     }
 
     // Close connection
-    mysqli_close($link);
+    unset($pdo);
 }
 ?>
 
@@ -161,12 +187,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                                 <label>Password.</label>
-                                <input type="text" name="password" class="form-control" value="<?php echo $password; ?>">
+                                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
                                 <span class="help-block"><?php echo $password_err; ?></span>
                             </div>
                             <input type="submit" class="btn btn-primary" value="Submit">
                             <a href="index.php" class="btn btn-default">Cancel</a>
-                                        <p>Already have an account? <a href="login.php">Login here</a>.</p>
+                            <p>Already have an account? <a href="login.php">Login here</a>.</p>
                         </form>
                     </div>
                 </div>        

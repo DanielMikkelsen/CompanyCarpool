@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+// Initialize the session
+session_start();
+ 
+// If session variable is not set it will redirect to login page
+if(!isset($_SESSION['email']) || empty($_SESSION['email'])){
+  header("location: login.php");
+  exit;
+}
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -16,7 +21,7 @@ and open the template in the editor.
         <div class="container-fluid">
             <a href="createRide.php" class="btn btn-default">Create Ride</a>
             <a href="createUser.php" class="btn btn-default">Create User</a>
-            <a href="createUser.php" class="btn btn-default">Login</a>
+            <a href="index.php" class="btn btn-default">Log out</a>
         </div>
         <?php
         // put your code here
