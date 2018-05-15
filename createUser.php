@@ -83,7 +83,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_email = $email;
             $param_position = $position;
             $param_department = $department;
-            $param_password = $password;
+            // the pw hash ensures that user's pws are not duplicated in the table
+            $param_password = password_hash($password, PASSWORD_DEFAULT);
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
@@ -165,6 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             <input type="submit" class="btn btn-primary" value="Submit">
                             <a href="index.php" class="btn btn-default">Cancel</a>
+                                        <p>Already have an account? <a href="login.php">Login here</a>.</p>
                         </form>
                     </div>
                 </div>        
