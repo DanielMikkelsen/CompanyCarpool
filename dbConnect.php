@@ -3,7 +3,7 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'server13.chosting.dk');
 define('DB_USERNAME', 'dingode1');
-define('DB_PASSWORD', 'xxx');
+define('DB_PASSWORD', 'P0u5n9t9qG');
 define('DB_NAME', 'dingode1_carpool');
  
 /* Attempt to connect to MySQL database */
