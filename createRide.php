@@ -3,7 +3,7 @@
 session_start();
 
 // If session variable is not set it will redirect to login page
-if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
     header("location: login.php");
     exit;
 }
@@ -101,35 +101,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check input errors before inserting in database
-    if (empty($firstname_err) && empty($lastname_err) && empty($phone_no_err && $email_err && $position_err && $password)) {
+    if (empty($depart_city_err) && empty($depart_street_err) && empty($depart_street_no_err && $departure_date_err 
+            && $departure_time_err && $dest_city_err && $dest_street_err && $dest_street_no_err && $arrival_time_err
+             && $available_seats_err)) {
 
         // Prepare an insert statement
-        $sql = "INSERT INTO Employee (firstname, lastname, phone_no,
-                email, position, department, password) VALUES (:firstname, :lastname, :phone_no, :email, :position, :department, :password)";
+        $sql = "INSERT INTO Ride (arrival_time, departure_date, departure_time, available_seats, depart_city, depart_street, depart_street_no,
+                dest_city, dest_street, dest_street_no) 
+                VALUES (:arrival_time, :departure_date, :departure_time, :available_seats, :depart_city, :depart_street, :depart_street_no,
+                :dest_city, :dest_street, :dest_street_no)";
 
         if ($stmt = $pdo->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
-            $stmt->bindParam(':firstname', $param_firstname, PDO::PARAM_STR);
-            $stmt->bindParam(':lastname', $param_lastname, PDO::PARAM_STR);
-            $stmt->bindParam(':phone_no', $param_phone_no, PDO::PARAM_INT);
-            $stmt->bindParam(':email', $param_email, PDO::PARAM_STR);
-            $stmt->bindParam(':position', $param_position, PDO::PARAM_STR);
-            $stmt->bindParam(':department', $param_department, PDO::PARAM_STR);
-            $stmt->bindParam(':password', $param_password, PDO::PARAM_STR);
+            $stmt->bindParam(':arrival_time', $param_arrival_time, PDO::PARAM_STR);
+            $stmt->bindParam(':departure_date', $param_departure_date, PDO::PARAM_STR);
+            $stmt->bindParam(':departure_time', $param_departure_time, PDO::PARAM_STR);
+            $stmt->bindParam(':available_seats', $param_available_seats, PDO::PARAM_STR);
+            $stmt->bindParam(':depart_city', $param_depart_city, PDO::PARAM_STR);
+            $stmt->bindParam(':depart_street', $param_depart_street, PDO::PARAM_STR);
+            $stmt->bindParam(':depart_street_no', $param_depart_street_no, PDO::PARAM_STR);
+            $stmt->bindParam(':dest_city', $param_dest_city, PDO::PARAM_STR);
+            $stmt->bindParam(':dest_street', $param_dest_street, PDO::PARAM_STR);
+            $stmt->bindParam(':dest_street_no', $param_dest_street_no, PDO::PARAM_STR);
 
             // Set parameters
-            $param_firstname = $firstname;
-            $param_lastname = $lastname;
-            $param_phone_no = $phone_no;
-            $param_email = $email;
-            $param_position = $position;
-            $param_department = $department;
-            $param_password = $password;
+            $param_arrival_time = $arrival_time;
+            $param_departure_date = $departure_date;
+            $param_departure_time = $departure_time;
+            $param_available_seats = $available_seats;
+            $param_depart_city = $depart_city;
+            $param_depart_street = $depart_street;
+            $param_depart_street_no = $depart_street_no;
+            $param_dest_city = $dest_city;
+            $param_dest_street = $dest_street;
+            $param_dest_street_no = $dest_street_no;
 
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 // Redirect to login page
-                header("location: login.php");
+                header("location: index.php");
             } else {
                 echo "Something went wrong. Please try again later.";
             }

@@ -3,7 +3,7 @@
 session_start();
  
 // If session variable is not set it will redirect to login page
-if(!isset($_SESSION['email']) || empty($_SESSION['email'])){
+if(!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])){
   header("location: login.php");
   exit;
 }
