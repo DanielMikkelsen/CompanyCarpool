@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Vestas Carpool: Create User</title>
+        <title>Vestas Carpool: Create Ride</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
         <style type="text/css">
             .wrapper{
@@ -194,12 +194,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span class="help-block"><?php echo $depart_street_no_err; ?></span>
                             </div>
                             <div class="form-group <?php echo (!empty($departure_date_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure date.</label>
+                                <label>Departure date (write as DD/MM).</label>
                                 <input type="text" name="departure_date" class="form-control" value="<?php echo $departure_date; ?>">
                                 <span class="help-block"><?php echo $departure_date; ?></span>
                             </div>
                             <div class="form-group <?php echo (!empty($departure_time_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure time.</label>
+                                <label>Departure time (write as HH:MM).</label>
                                 <input type="text" name="departure_time" class="form-control" value="<?php echo $departure_time; ?>">
                                 <span class="help-block"><?php echo $departure_time_err; ?></span>
                             </div>
@@ -219,7 +219,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span class="help-block"><?php echo $dest_street_no_err; ?></span>
                             </div>
                             <div class="form-group <?php echo (!empty($arrival_time_err)) ? 'has-error' : ''; ?>">
-                                <label>Estimated time of arrival.</label>
+                                <label>Estimated time of arrival (write as HH:MM).</label>
                                 <input type="text" name="arrival_time" class="form-control" value="<?php echo $arrival_time; ?>">
                                 <span class="help-block"><?php echo $arrival_time_err; ?></span>
                             </div>
