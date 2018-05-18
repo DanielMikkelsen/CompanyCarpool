@@ -101,14 +101,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check input errors before inserting in database
-    if (empty($depart_city_err) && empty($depart_street_err) && empty($depart_street_no_err && $departure_date_err 
-            && $departure_time_err && $dest_city_err && $dest_street_err && $dest_street_no_err && $arrival_time_err
-             && $available_seats_err)) {
+    if (empty($depart_city_err) && empty($depart_street_err) && empty($depart_street_no_err && $departure_date_err && $departure_time_err && $dest_city_err && $dest_street_err && $dest_street_no_err && $arrival_time_err && $available_seats_err)) {
 
         // Prepare an insert statement
-        $sql = "INSERT INTO Ride (arrival_time, departure_date, departure_time, available_seats, depart_city, depart_street, depart_street_no,
-                dest_city, dest_street, dest_street_no) 
-                VALUES (:arrival_time, :departure_date, :departure_time, :available_seats, :depart_city, :depart_street, :depart_street_no,
+        $sql = "INSERT INTO Ride (arrival_time, departure_date, departure_time, available_seats, employee_id,
+            depart_city, depart_street, depart_street_no, dest_city, dest_street, dest_street_no) 
+                VALUES (:arrival_time, :departure_date, :departure_time, :available_seats, :employee_id, 
+                :depart_city, :depart_street, :depart_street_no,
                 :dest_city, :dest_street, :dest_street_no)";
 
         if ($stmt = $pdo->prepare($sql)) {
@@ -117,18 +116,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindParam(':departure_date', $param_departure_date, PDO::PARAM_STR);
             $stmt->bindParam(':departure_time', $param_departure_time, PDO::PARAM_STR);
             $stmt->bindParam(':available_seats', $param_available_seats, PDO::PARAM_STR);
+            $stmt->bindParam(':employee_id', $param_employee_id, PDO::PARAM_INT);
             $stmt->bindParam(':depart_city', $param_depart_city, PDO::PARAM_STR);
             $stmt->bindParam(':depart_street', $param_depart_street, PDO::PARAM_STR);
-            $stmt->bindParam(':depart_street_no', $param_depart_street_no, PDO::PARAM_STR);
+            $stmt->bindParam(':depart_street_no', $param_depart_street_no, PDO::PARAM_INT);
             $stmt->bindParam(':dest_city', $param_dest_city, PDO::PARAM_STR);
             $stmt->bindParam(':dest_street', $param_dest_street, PDO::PARAM_STR);
-            $stmt->bindParam(':dest_street_no', $param_dest_street_no, PDO::PARAM_STR);
+            $stmt->bindParam(':dest_street_no', $param_dest_street_no, PDO::PARAM_INT);
 
             // Set parameters
             $param_arrival_time = $arrival_time;
             $param_departure_date = $departure_date;
             $param_departure_time = $departure_time;
             $param_available_seats = $available_seats;
+            $param_employee_id = $_SESSION['employee_id'];
             $param_depart_city = $depart_city;
             $param_depart_street = $depart_street;
             $param_depart_street_no = $depart_street_no;

@@ -41,6 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if($stmt->rowCount() == 1){
                     if($row = $stmt->fetch()){
                         $password = $row['password'];
+                        //fetch employee's id to store in order to identify her later in the session
                         $employee_id = $row['employee_id'];
                         //check if password matches the email
                         if($password == $_POST["password"]){
