@@ -57,10 +57,10 @@ $employee_id = $_SESSION['employee_id'];
                         <tr><td align="left"><?php echo $row["depart_city"]; ?></td>
                             <td align="left"><?php echo $row["dest_city"]; ?></td>
                             <td align="left"><?php echo $row["departure_date"]; ?></td>
-                            <td align="center">
+                            <td align="left">
                                 <a href="deleteRide.php?id=<?php echo $row["ride_id"]; ?>"
                                    onclick="return confirm('Are you sure you want to delete this ride?');"
-                                   >Delete</a>
+                                   >Delete Ride</a>
                             </td>
                         </tr>
     <?php
