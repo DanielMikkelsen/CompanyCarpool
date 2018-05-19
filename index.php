@@ -20,7 +20,6 @@ if(!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])){
     <body>
         <div class="container-fluid">
             <a href="createRide.php" class="btn btn-default">Create Ride</a>
-            <a href="createUser.php" class="btn btn-default">Create User</a>
             <a href="myAccount.php" class="btn btn-default">My Account</a>
             <a href="logout.php" class="btn btn-default">Log out</a>
         </div>
