@@ -58,7 +58,9 @@ $employee_id = $_SESSION['employee_id'];
                             <td align="left"><?php echo $row["dest_city"]; ?></td>
                             <td align="left"><?php echo $row["departure_date"]; ?></td>
                             <td align="center">
-                                <a href="deleteRide.php?id=<?php echo $row["ride_id"]; ?>">Delete</a>
+                                <a href="deleteRide.php?id=<?php echo $row["ride_id"]; ?>"
+                                   onclick="return confirm('Are you sure you want to delete this ride?');"
+                                   >Delete</a>
                             </td>
                         </tr>
     <?php
