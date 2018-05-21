@@ -26,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $depart_city = $input_depart_city;
     }
 
-
     // Validate departure street
     $input_depart_street = trim($_POST["depart_street"]);
     if (empty($input_depart_street)) {
@@ -58,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $departure_time = $input_departure_time;
     }
-
 
     // Validate dest_city
     $input_dest_city = trim($_POST["dest_city"]);
@@ -194,7 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span class="help-block"><?php echo $depart_street_no_err; ?></span>
                             </div>
                             <div class="form-group <?php echo (!empty($departure_date_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure date (write as DD/MM).</label>
+                                <label>Departure date (write as YYYY-MM-DD).</label>
                                 <input type="text" name="departure_date" class="form-control" value="<?php echo $departure_date; ?>">
                                 <span class="help-block"><?php echo $departure_date; ?></span>
                             </div>

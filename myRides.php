@@ -34,8 +34,6 @@ $employee_id = $_SESSION['employee_id'];
     <body>
         <div class="form">
             <div class="container-fluid">
-                <a href="myBookings.php" class="btn btn-default">View rides I've booked.</a>
-                <a href="myAccount.php" class="btn btn-default">Edit account details.</a>
                 <a href="index.php" class="btn btn-default">Back to front page</a>
             </div>
             <h2>My Offered Rides</h2>

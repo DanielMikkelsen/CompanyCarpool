@@ -1,0 +1,88 @@
+html {
+    /* overflow: hidden; */
+    height: 100%;
+    overflow: auto;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+ }
+.event {
+    cursor: pointer;
+}
+
+.event:hover {
+    zoom: 102%;
+}
+
+.row-striped:nth-of-type(odd){
+  background-color: #efefef;
+  border-left: 4px #5C425A solid;
+}
+
+.row-striped:nth-of-type(even){
+  background-color: #ffffff;
+  border-left: 4px #efefef solid;
+}
+
+.row-striped {
+    padding: 2%;
+}
+
+.container-calender {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.badge-secondary {
+    background-color: #5C425A;
+}
+
+.fa-user {
+    padding: 1.3px;
+}
+
+.container-footer {
+    background-color: #5C425A;
+    color: white;
+    padding-top: 5em;
+    padding-bottom: 7em;
+}
+
+#header {
+    background-image: url('https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    width: auto;
+    min-height: 2em;
+    background-size: cover;
+    background-position: center;
+    padding-top: 12em;
+    padding-bottom: 12em;
+}
+
+.header-text {
+    color: white;
+    text-transform: uppercase;
+    padding: 2%;
+}
+
+.btn {
+    color: white;
+    border-color: white;
+    background-color: rgba(77, 77, 85, 0.4);
+    margin-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.navbar {
+    background: transparent;
+    background-color: rgba(43,43,43,0.8);
+}
+
+.search-bar {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
