@@ -26,7 +26,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($email_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT employee_id, email, password FROM Employee WHERE email = :email";
+        $sql = "SELECT employee_id, email, password FROM Employee "
+                . "WHERE email = :email";
         
         if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
@@ -41,7 +42,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if($stmt->rowCount() == 1){
                     if($row = $stmt->fetch()){
                         $password = $row['password'];
-                        //fetch employee's id to store in order to identify her later in the session
+                        //fetch employee's id to store in order to identify her 
+                        //later in the session
                         $employee_id = $row['employee_id'];
                         //check if password matches the email
                         if($password == $_POST["password"]){
@@ -52,7 +54,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: index.php");
                         } else{
                             // Display an error message if password is not valid
-                            $password_err = 'The password you entered was not valid.';
+                            $password_err = 'The password you entered was not '
+                                    . 'valid.';
                         }
                     }
                 } else{
