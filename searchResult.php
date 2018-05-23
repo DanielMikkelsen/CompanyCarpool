@@ -57,7 +57,16 @@ if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
                     <h3><?php echo date("M", strtotime($row['departure_date'])); ?></h3>
                 </div>
                 <div class="col-10">
-                    <h4 class="text-uppercase"><strong><?php echo $row['firstname']; ?> <?php echo $row['lastname']; ?></strong></h4>
+                    <h4 class="text-uppercase"><strong><?php echo $row['firstname']; ?> <?php echo $row['lastname']; ?></strong>
+                        <li class="list-inline-item pull-right">
+                            <?php
+                            $x = 1;
+                            while ($x <= $row['available_seats']) {
+                                echo'<i class="fa fa-user" aria-hidden="true"></i>';
+                                $x++;
+                            }
+                            ?>
+                        </li></h4>
 
                     <ul class="list-inline">
                         <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo date("d-m-Y", strtotime($row['departure_date'])); ?></li>
@@ -75,6 +84,10 @@ if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
                         <li class="list-inline-item"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $row['phone_no']; ?></li>
                         <li class="list-inline-item"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $row['email']; ?></li>
                     </ul>
+                    <a href="bookRide.php?id=<?php echo $row["ride_id"]; ?>"
+                       class="btn btn-primary"
+                       onclick="return confirm('Are you sure you want to book this ride?');"
+                       >Book</a>
                 </div>
             </div>
 

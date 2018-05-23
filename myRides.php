@@ -11,10 +11,7 @@ if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
 // Include dbConnection file
 require_once 'dbConnectProcedural.php';
 
-//tutorial used for this page: 
-//https://www.allphptricks.com/insert-view-edit-and-delete-record-from-database-using-php-and-mysqli/
-
-//employee to show rides from
+//employee to book the ride for
 $employee_id = $_SESSION['employee_id'];
 ?>
 
