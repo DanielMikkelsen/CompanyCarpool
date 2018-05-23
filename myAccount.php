@@ -19,9 +19,7 @@ if(!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])){
     </head>
     <body>
         <div class="container-fluid">
-            <a href="myRides.php" class="btn btn-default">View my offered rides</a>
-            <a href="myBookings.php" class="btn btn-default">View rides I've booked</a>
-            <a href="myAccount.php" class="btn btn-default">Edit account details</a>
+            <a href="myRides.php" class="btn btn-default">Offered rides</a>
             <a href="index.php" class="btn btn-default">Back to front page</a>
         </div>
     </body>

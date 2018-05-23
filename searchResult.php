@@ -84,10 +84,25 @@ if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
                         <li class="list-inline-item"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $row['phone_no']; ?></li>
                         <li class="list-inline-item"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $row['email']; ?></li>
                     </ul>
+                    <?php
+                    //if available_seat == 0, make this booking unavailable 
+                    //and inform the user of it
+                    if (!($row['available_seats'] == 0)){
+                    ?>
                     <a href="bookRide.php?id=<?php echo $row["ride_id"]; ?>"
                        class="btn btn-primary"
                        onclick="return confirm('Are you sure you want to book this ride?');"
                        >Book</a>
+                    <?php 
+                    }
+                    else {
+                    ?>
+                    <li class="list-inline-item pull-right">
+                    <h5><strong> No available seats! </strong></h5>
+                    </li>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
 

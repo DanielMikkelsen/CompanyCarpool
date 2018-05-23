@@ -11,8 +11,6 @@ if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
 
 require('dbConnectProcedural.php');
 
-//TODO if available_seat < 1, make this booking unavailable
-
 //employee to book the seat for
 $employee_id = $_SESSION['employee_id'];
 
