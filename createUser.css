@@ -1,0 +1,65 @@
+html {
+    height: 100%;
+    overflow: auto;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    align-items:center;
+ }
+
+.btn {
+    color: white;
+    border-color: white;
+    background-color: rgba(77, 77, 85, 0.4);
+    margin-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.navbar {
+    background: transparent;
+    background-color: rgba(43,43,43,0.8);
+}
+
+.row {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.form-group {
+    padding: 0%;
+}
+
+.btn {
+    color: white;
+    border-color: white;
+    background-color: rgba(77, 77, 85, 0.4);
+    margin-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #5C425A;
+    border-color: #5C425A;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #5C425A;
+    border-color: #5C425A;
+}
+
+
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(92,66,90,.5);
+}

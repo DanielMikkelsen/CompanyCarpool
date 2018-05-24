@@ -9,9 +9,6 @@ html {
     min-height: 100%;
     width: 100%;
  }
-.event {
-    cursor: pointer;
-}
 
 .event:hover {
     zoom: 102%;
@@ -71,3 +68,25 @@ html {
     background: transparent;
     background-color: rgba(43,43,43,0.8);
 }
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #5C425A;
+    border-color: #5C425A;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #5C425A;
+    border-color: #5C425A;
+}
+
+
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(92,66,90,.5);
+}
+
+
+
+

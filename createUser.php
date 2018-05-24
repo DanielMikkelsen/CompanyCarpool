@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate lastname
     $input_lastname = trim($_POST["lastname"]);
     if (empty($input_lastname)) {
-        $lastname_err = 'Please, enter an address.';
+        $lastname_err = 'Please, enter a lastname.';
     } else {
         $lastname = $input_lastname;
     }
@@ -133,70 +133,141 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <meta charset="UTF-8">
-        <title>Vestas Carpool: Create User</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-        <style type="text/css">
-            .wrapper{
-                width: 500px;
-                margin: 0 auto;
-            }
-        </style>
+        <meta charset="utf-8">
+        <title>Vestas Carpool</title>
+        <meta name="wievport" content="width=device, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+        <!-- Own CSS link -->
+        <link rel="stylesheet" href="createUser.css">
+
     </head>
     <body>
-        <div class="wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="page-header">
-                            <h2>Create User</h2>
-                        </div>
-                        <p>Please, fill this form and hit submit when you are done to make a new user.</p>
+
+        <!--navnbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="home.php"><strong>Vestas Carpool</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Navbar: Left side-->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Find ride</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="createRide.php">Offer Ride</a>
+                        </li>
+                    </ul>
+
+                    <!-- Navbar: Right side-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="myAccount.php">My Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--navnbar -->
+
+
+<div class="container py-5 container-header">
+            <div class="row justify-content-center align-self-center">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <h3> Register </h3>
+                           <p>Please, fill this form and hit submit when you are done to make a new user.</p>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                            <div class="form-group <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
-                                <label>Firstname</label>
-                                <input type="text" name="firstname" class="form-control" value="<?php echo $firstname; ?>">
-                                <span class="help-block"><?php echo $firstname_err; ?></span>
+
+
+                        
+                        <div class="form-group row <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Firstname</label>
+                            <div class="col-sm-9">
+                            <input type="text" name="" class="form-control" value="<?php echo $firstname; ?>">
+                            <span class="help-block"><?php echo $firstname_err; ?></span>
                             </div>
-                            <div class="form-group <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
-                                <label>Lastname</label>
-                                <textarea name="lastname" class="form-control"><?php echo $lastname; ?></textarea>
-                                <span class="help-block"><?php echo $lastname_err; ?></span>
+                        </div>
+                        <div class="form-group row <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Lastname</label>
+                            <div class="col-sm-9">
+                            <input type="text" name="lastname" class="form-control" value="<?php echo $lastname; ?>">
+                            <span class="help-block"><?php echo $lastname_err; ?></span>
                             </div>
-                            <div class="form-group <?php echo (!empty($phone_no_err)) ? 'has-error' : ''; ?>">
-                                <label>Phone number.</label>
-                                <input type="text" name="phone_no" class="form-control" value="<?php echo $phone_no; ?>">
-                                <span class="help-block"><?php echo $phone_no_err; ?></span>
+                        </div>
+                         <div class="form-group row <?php echo (!empty($position_err)) ? 'has-error' : ''; ?>">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Position</label>
+                            <div class="col-sm-9">
+                            <input type="text" name="position"  class="form-control" value="<?php echo $position; ?>">
+                            <span class="help-block"><?php echo $position_err; ?></span>
                             </div>
-                            <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                                <label>Email.</label>
-                                <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-                                <span class="help-block"><?php echo $email_err; ?></span>
+                        </div>
+                        <div class="form-group row <?php echo (!empty($department_err)) ? 'has-error' : ''; ?>">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Department</label>
+                            <div class="col-sm-9">
+                            <input type="text" name="department" class="form-control"  value="<?php echo $department; ?>">
+                            <span class="help-block"><?php echo $department_err; ?></span>
                             </div>
-                            <div class="form-group <?php echo (!empty($position_err)) ? 'has-error' : ''; ?>">
-                                <label>Position in Vestas.</label>
-                                <input type="text" name="position" class="form-control" value="<?php echo $position; ?>">
-                                <span class="help-block"><?php echo $position_err; ?></span>
+                        </div>    
+            
+                        <div class="form-group row <?php echo (!empty($phone_no_err)) ? 'has-error' : ''; ?>">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Phone number</label>
+                            <div class="col-sm-9">
+                            <input type="text" name="phone_no" class="form-control" value="<?php echo $phone_no; ?>">
+                            <span class="help-block"><?php echo $phone_no_err; ?></span>
                             </div>
-                            <div class="form-group <?php echo (!empty($department_err)) ? 'has-error' : ''; ?>">
-                                <label>Department in Vestas.</label>
-                                <input type="text" name="department" class="form-control" value="<?php echo $department; ?>">
-                                <span class="help-block"><?php echo $department_err; ?></span>
+                        </div>
+
+                        <div class="form-group row <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                            <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
+                            <span class="help-block"><?php echo $email_err; ?></span>
                             </div>
-                            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                                <label>Password.</label>
-                                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                                <span class="help-block"><?php echo $password_err; ?></span>
+                        </div>
+                
+                        <div class="form-group row <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-9">
+                            <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+                            <span class="help-block"><?php echo $password_err; ?></span>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Submit">
-                            <a href="index.php" class="btn btn-default">Cancel</a>
+                        </div>
+                            <input type="submit" class="btn btn-primary pull-right" value="Submit">
+                            <a href="index.php" class="btn btn-secondary pull-right">Cancel</a>
                             <p>Already have an account? <a href="login.php">Login here</a>.</p>
                         </form>
+
+                        </div>
+
+
                     </div>
-                </div>        
+                    <!--/row-->
+
+                </div>
+                <!--/col-->
             </div>
+            <!--/row-->
         </div>
+        <!--/container-->
     </body>
 </html>

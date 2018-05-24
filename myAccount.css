@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+    overflow: auto;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    /* background-image: url('img/asphalt-car-driving-8373.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; */
+ }
+
+.navbar {
+    background: transparent;
+    background-color: rgba(43,43,43,0.8);
+}
+
+.header-text {
+    color: rgb(7, 6, 6);
+    text-transform: uppercase;
+    padding: 2em;
+}
+
+
+.container-padding {
+    padding-top: 6em;
+    padding-bottom: 4%;
+}
+
+.card-body .nav-link {
+    color: #fff;
+}
+
+.card {
+    background-color: rgba(92,66,90,.9);
+   
+}
+
+.event:hover {
+    zoom: 102%;
+}
