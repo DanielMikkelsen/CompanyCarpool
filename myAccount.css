@@ -9,10 +9,10 @@ html {
     width: 100%;
     display:flex;
     align-items:center;
-    /* background-image: url('img/asphalt-car-driving-8373.jpg');
+    background-image: url('img/diego-ph-209799-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    color: white; */
+    color: white;
  }
 
 .navbar {
@@ -37,10 +37,12 @@ html {
 }
 
 .card {
-    background-color: rgba(92,66,90,.9);
+    background-color:rgba(43, 43, 43, 0.8);
    
 }
 
 .event:hover {
     zoom: 102%;
 }
+
+

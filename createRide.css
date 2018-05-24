@@ -9,10 +9,12 @@ html {
     width: 100%;
     display:flex;
     align-items:center;
-    /* background-image: url('img/asphalt-car-driving-8373.jpg');
+    background-image: url('img/diego-ph-209799-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    color: white; */
+    /* color: white;
+    margin: auto;
+    background: #eaeaea;   */
  }
 
 .navbar {
@@ -28,8 +30,7 @@ html {
 
 
 .container-padding {
-    padding-top: 6em;
-    padding-bottom: 4%;
+    padding-top: 5%;
 }
 
 .btn {
@@ -37,10 +38,15 @@ html {
     border-color: white;
     background-color: rgba(77, 77, 85, 0.4);
     margin-top: 2%;
+    margin-bottom: 2%;
     padding-left: 3%;
     padding-right: 3%;
 }
 
+.btn-primary {
+    margin-right: 5%;
+    margin-left: 1%
+}
 
 .btn-primary:hover {
     color: #fff;
@@ -54,8 +60,127 @@ html {
     border-color: #5C425A;
 }
 
-
-
 .btn-primary.focus, .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(92,66,90,.5);
+}
+
+  .info p {
+    text-align:center;
+    color: #999;
+    text-transform:none;
+    font-weight:600;
+    font-size:15px;
+    margin-top:2px
+  }
+  
+  .info i {
+    color:#F6AA93;
+  }
+
+  form {
+    border-radius: 5px;
+    /* max-width:700px; */
+    width:100%;
+    margin: 5% auto;
+    background-color: #FFFFFF;
+    overflow: hidden;
+  }
+  
+ 
+  p {
+    margin: 0px 0px 3px 0px;
+    font-weight: 500;
+    line-height: 1;
+    color:#333;
+  }
+  
+  h1 {
+    text-align:center; 
+    color: #5C425A;
+    text-shadow: 1px 1px 0px #FFF;
+    margin:50px 0px 0px 0px
+  }
+
+
+  form h1 {
+    font-size: 18px;
+    background: #5C425A none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+    padding: 22px 25px;
+    border-radius: 5px 5px 0px 0px;
+    margin: auto;
+    text-shadow: none;
+    text-align: left;
+}
+  
+  .form-group input {
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #eee;
+    height: 40px;
+    float: left;
+    padding: 0px 15px;
+    width: 82%;
+
+  }
+   
+  a {
+    text-decoration:inherit
+  }
+  
+  
+  .form-group {
+    overflow: hidden;
+    clear: both;
+  }
+  
+  .icon-case {
+    width: 35px;
+    float: left;
+    border-radius: 5px 0px 0px 5px;
+    background:#eeeeee;
+    height:40px;
+    position: relative;
+    text-align: center;
+    line-height:40px;
+  }
+  
+  i {
+    color:#555;
+  }
+  
+  .contentform {
+    padding: 40px 30px;
+  }
+  
+  
+  .leftcontact {
+    width:50%; 
+    float:left;
+    box-sizing: border-box;
+    padding-left: 3%;
+  }
+
+  .leftcontact .form-groups {
+    border-right: 1px dotted #CCC;
+  }
+
+  
+  .rightcontact {
+    width:50%;
+    float:right;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 15px;
+    padding-left: 4%; 
+  }
+
+
+.help-block {
+    color: rgb(146, 33, 39);
+    display: inline-block;
+}
+
+.header-description {
+    padding-left: 0px;
+    padding-top: 3%;
+    min-height: 45px;
 }

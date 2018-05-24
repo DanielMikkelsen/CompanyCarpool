@@ -51,14 +51,14 @@ if(!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])){
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Find ride</a> 
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item ">
                             <a class="nav-link" href="createRide.php">Offer Ride</a>
                         </li>
                     </ul>
 
                     <!-- Navbar: Right side-->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="myAccount.php">My Account</a>
                         </li>
                         <li class="nav-item">
@@ -85,8 +85,8 @@ if(!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])){
                 <div class="col-sm-6">
                     <div class="card text-center text-white mb-3 event">
                         <div class="card-body">
-                            <a href="myRides.php" class="nav-link"><h5 class="card-title">Offered rides</h5>
-                            <p class="card-text">Here you can see all rides you have offered</p></a>
+                            <a href="myRides.php" class="nav-link"><h5 class="card-title">Booked rides</h5>
+                            <p class="card-text">Under development - not working at the moment</p></a>
                         </div>
                     </div>
                 </div>

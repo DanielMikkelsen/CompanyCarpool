@@ -58,7 +58,7 @@ if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
                     <!-- Navbar: Right side-->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="myAccount.php">My Rides</a>
+                            <a class="nav-link" href="myAccount.php">My Account</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="logout.php">Logout</a>

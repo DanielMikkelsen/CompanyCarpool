@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($input_departure_date)) {
         $departure_date_err = "Please, enter a departure date.";
     } else {
-        $departure_date = $input_departure_date;
+        $departure_date = date("Y-m-d", strtotime($input_departure_date));
     }
 
     // Validate departure time
@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
                 // Redirect to login page
-                header("location: index.php");
+                header("location: home.php");
             } else {
                 echo "Something went wrong. Please try again later.";
             }
@@ -182,112 +182,164 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
     <body>
-            <!--navnbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-                <div class="container">
-                    <a class="navbar-brand" href="home.php"><strong>Vestas Carpool</strong></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--navnbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="home.php"><strong>Vestas Carpool</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                        <!-- Navbar: Left side-->
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.php">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.php">Find ride</a> 
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="createRide.php">Offer Ride</a>
-                            </li>
-                        </ul>
+                    <!-- Navbar: Left side-->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Find ride</a> 
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="createRide.php">Offer Ride</a>
+                        </li>
+                    </ul>
 
-                        <!-- Navbar: Right side-->
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="myAccount.php">My Account</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="logout.php">Logout</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- Navbar: Right side-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="myAccount.php">My Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-            <!--navnbar -->
+            </div>
+        </nav>
+        <!--navnbar -->
 
-
-
-
-        
-            <div class="container container-padding">
-            <div class="wrapper">
+        <div class="container container-padding">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="page-header">
-                            <h2>Create Ride</h2>
-                        </div>
-                        <p>Please, fill this form and hit submit when you are done to make a new ride.</p>
+                        
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                            <div class="form-group <?php echo (!empty($depart_city_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure city</label>
-                                <input type="text" name="depart_city" class="form-control" value="<?php echo $depart_city; ?>">
-                                <span class="help-block"><?php echo $depart_city_err; ?></span>
+                            <h1 class="text-center">Create ride</h1>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="leftcontact">
+                                            <h4 class="header-description">Where are you going from?</h4>
+                                            <div class="form-groups">
+                                                <div class="form-group <?php echo (!empty($depart_street_err)) ? 'has-error' : ''; ?>">
+                                                    <p>Street</p>
+                                                    <span class="icon-case"><i class="fa fa-building-o"></i></span>
+                                                    <input type="text" name="depart_street"  value="<?php echo $depart_street; ?>" />
+                                                    <span class="help-block"><?php echo $depart_street_err; ?></span>
+                                                </div>
+
+                                                <div class="form-group <?php echo (!empty($depart_street_no_err)) ? 'has-error' : ''; ?>">
+                                                    <p>Street number</p>
+                                                    <span class="icon-case"><i class="fa fa-building-o"></i></span>
+                                                    <input type="text" name="depart_street_no"  value="<?php echo $depart_street_no; ?>" />
+                                                    <span class="help-block"><?php echo $depart_street_no_err; ?></span>
+                                                </div>
+
+                                                <div class="form-group <?php echo (!empty($depart_city_err)) ? 'has-error' : ''; ?>">
+                                                    <p>City</p>
+                                                    <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+                                                    <input type="text" name="depart_city" value="<?php echo $depart_city; ?>" />
+                                                    <span class="help-block"><?php echo $depart_city_err; ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="rightcontact">
+                                            <h4 class="header-description">Where are you going to?</h4>
+
+                                                <div class="form-group <?php echo (!empty($dest_street_err)) ? 'has-error' : ''; ?>">
+                                                    <p>Street</p>
+                                                    <span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+                                                    <input type="text" name="dest_street" value="<?php echo $dest_street; ?>" />
+                                                    <span class="help-block"><?php echo $dest_street_err; ?></span>
+                                                </div>
+
+                                                <div class="form-group <?php echo (!empty($dest_street_no_err)) ? 'has-error' : ''; ?>">
+                                                    <p>Street number</p>
+                                                    <span class="icon-case"><i class="fa fa-building-o"></i></span>
+                                                    <input type="text" name="dest_street_no" value="<?php echo $dest_street_no; ?>"/>
+                                                    <span class="help-block"><?php echo $dest_street_no_err; ?></span>
+                                                </div>
+
+                                                <div class="form-group <?php echo (!empty($dest_city_err)) ? 'has-error' : ''; ?>">
+                                                    <p>City</p>
+                                                    <span class="icon-case"><i class="fa fa-building-o"></i></i></span>
+                                                    <input type="text" name="dest_city" value="<?php echo $dest_city; ?>" />
+                                                    <span class="help-block"><?php echo $dest_city_err; ?></span>
+                                                </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="leftcontact">
+                                            <h4 class="header-description">Travel details</h4>
+                                                
+                                                <div class="form-group date <?php echo (!empty($departure_date_err)) ? 'has-error' : ''; ?>" id="datetimepicker4" data-target-input="nearest">
+                                                    <p>Depature date (DD-MM-YYYY)</p>
+                                                    <span class="icon-case input-group-text" data-target="#datetimepicker4" data-toggle="datetimepicker"><i class="fa fa-calendar"></i></span>
+                                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" name="departure_date" value="<?php echo $departure_date; ?>"/>
+                                                    <span class="help-block"><?php echo $departure_date_err; ?></span>
+                                                </div>
+
+                                                <div class="form-group <?php echo (!empty($available_seats_err)) ? 'has-error' : ''; ?>">
+                                                    <p>Number of available seats</p>
+                                                    <span class="icon-case"><i class="fa fa-user"></i></span>
+                                                    <input type="text" name="available_seats"value="<?php echo $available_seats; ?>"/>
+                                                    <span class="help-block"><?php echo $available_seats_err; ?></span>
+                                                </div>
+
+                                        </div>
+
+                                        <div class="rightcontact">
+                                            <h4 class="header-description"></h4>
+                                        
+                                                <div class="form-group date <?php echo (!empty($departure_time_err)) ? 'has-error' : ''; ?>" id="datetimepicker1" data-target-input="nearest">
+                                                    <p>Departure time (HH:MM)</p>
+                                                    <span class="icon-case" data-target="#datetimepicker1" data-toggle="datetimepicker"><i class="fa fa-clock-o"></i></span>
+                                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" name="departure_time" value="<?php echo $departure_time; ?>" />
+                                                    <span class="help-block"><?php echo $departure_time_err; ?></span>
+                                                </div>
+
+                                                <div class="form-group date <?php echo (!empty($arrival_time_err)) ? 'has-error' : ''; ?>" id="datetimepicker2" data-target-input="nearest">
+                                                    <p>Estimated arrival (HH:MM)</p>
+                                                    <span class="icon-case" data-target="#datetimepicker2" data-toggle="datetimepicker"><i class="fa fa-clock-o"></i></span>
+                                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" name="arrival_time" value="<?php echo $arrival_time; ?>"/>
+                                                    <span class="help-block"><?php echo $arrival_time_err; ?></span>
+                                                </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="submit" class="btn btn-primary pull-right" value="Submit">
+                                        <a href="home.php" class="btn btn-secondary pull-right">Cancel</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group <?php echo (!empty($depart_street_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure street</label>
-                                <textarea name="depart_street" class="form-control"><?php echo $depart_street; ?></textarea>
-                                <span class="help-block"><?php echo $depart_street_err; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($depart_street_no_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure street number.</label>
-                                <input type="text" name="depart_street_no" class="form-control" value="<?php echo $depart_street_no; ?>">
-                                <span class="help-block"><?php echo $depart_street_no_err; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($departure_date_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure date (write as YYYY-MM-DD).</label>
-                                <input type="text" name="departure_date" class="form-control" value="<?php echo $departure_date; ?>">
-                                <span class="help-block"><?php echo $departure_date; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($departure_time_err)) ? 'has-error' : ''; ?>">
-                                <label>Departure time (write as HH:MM).</label>
-                                <input type="text" name="departure_time" class="form-control" value="<?php echo $departure_time; ?>">
-                                <span class="help-block"><?php echo $departure_time_err; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($dest_city_err)) ? 'has-error' : ''; ?>">
-                                <label>Destination city</label>
-                                <input type="text" name="dest_city" class="form-control" value="<?php echo $dest_city; ?>">
-                                <span class="help-block"><?php echo $dest_city_err; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($dest_street_err)) ? 'has-error' : ''; ?>">
-                                <label>Destination street</label>
-                                <textarea name="dest_street" class="form-control"><?php echo $dest_street; ?></textarea>
-                                <span class="help-block"><?php echo $dest_street_err; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($dest_street_no_err)) ? 'has-error' : ''; ?>">
-                                <label>Destination street number.</label>
-                                <input type="text" name="dest_street_no" class="form-control" value="<?php echo $dest_street_no; ?>">
-                                <span class="help-block"><?php echo $dest_street_no_err; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($arrival_time_err)) ? 'has-error' : ''; ?>">
-                                <label>Estimated time of arrival (write as HH:MM).</label>
-                                <input type="text" name="arrival_time" class="form-control" value="<?php echo $arrival_time; ?>">
-                                <span class="help-block"><?php echo $arrival_time_err; ?></span>
-                            </div>
-                            <div class="form-group <?php echo (!empty($available_seats_err)) ? 'has-error' : ''; ?>">
-                                <label>Available seats.</label>
-                                <input type="text" name="available_seats" class="form-control" value="<?php echo $available_seats; ?>">
-                                <span class="help-block"><?php echo $available_seats_err; ?></span>
-                            </div>
-                            <input type="submit" class="btn btn-primary pull-right" value="Submit">
-                            <a href="index.php" class="btn btn-secondary pull-right">Cancel</a>
                         </form>
+    
                     </div>
                 </div>        
-            </div>
+
         </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -296,6 +348,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/locale/da.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    </body>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker4').datetimepicker({
+                format: 'DD-MM-YYYY'
+            });
+        }); 
 
-</html>
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+                format: 'LT',
+                stepping: 5
+            });
+        });
+
+        $(function () {
+            $('#datetimepicker2').datetimepicker({
+                format: 'LT',
+                stepping: 5
+            });
+        });
+    </script>
+
+  </body>
+
+  </html>

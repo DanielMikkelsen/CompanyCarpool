@@ -8,7 +8,6 @@ html {
     margin: 0px;
     min-height: 100%;
     width: 100%;
-    background: rgb(230, 228, 229);
  }
 
 .event:hover {
@@ -17,7 +16,7 @@ html {
 
 .row-striped:nth-of-type(odd){
   background-color: #efefef;
-  border-left: 4px rgb(202, 198, 202) solid;
+  border-left: 4px #5C425A solid;
 }
 
 .row-striped:nth-of-type(even){
@@ -38,9 +37,6 @@ html {
     background-color: #5C425A;
 }
 
-.fa-user {
-    padding: 1.3px;
-}
 
 .container-footer {
     background-color: #5C425A;
@@ -87,7 +83,4 @@ html {
 .btn-primary.focus, .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(92,66,90,.5);
 }
-
-
-
 
