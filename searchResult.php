@@ -75,7 +75,6 @@ if (!isset($_SESSION['employee_id']) || empty($_SESSION['employee_id'])) {
         if (isset($_GET['form_submit'])) {
             $from = $_GET['from'];
             $to = $_GET['to'];
-            $from = preg_replace("#[^0-9a-z]#i", "", $from);
             if ($_GET['date']) {
                 $date = date("Y-m-d", strtotime($_GET['date']));
             } else {
