@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check input errors before inserting in database
-    if (empty($firstname_err) && empty($lastname_err) && empty($phone_no_err && $email_err && $position_err && $password)) {
+    if (empty($firstname_err) && empty($lastname_err) && empty($phone_no_err) && empty($email_err) && empty($department_err) && empty($position_err) && empty($password_err)) {
 
         // Prepare an insert statement
         $sql = "INSERT INTO Employee (firstname, lastname, phone_no,
@@ -203,7 +203,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="form-group row <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
                             <label for="colFormLabel" class="col-sm-3 col-form-label">Firstname</label>
                             <div class="col-sm-9">
-                            <input type="text" name="" class="form-control" value="<?php echo $firstname; ?>">
+                            <input type="text" name="firstname" class="form-control" value="<?php echo $firstname; ?>">
                             <span class="help-block"><?php echo $firstname_err; ?></span>
                             </div>
                         </div>
