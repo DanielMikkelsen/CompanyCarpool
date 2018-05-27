@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($input_departure_date)) {
         $departure_date_err = "Please, enter a departure date.";
     } else {
-        $departure_date = date("Y-m-d", strtotime($input_departure_date));
+        $departure_date = $input_departure_date;
     }
 
     // Validate departure time
@@ -99,7 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Check input errors before inserting in database
-    if (empty($depart_city_err) && empty($depart_street_err) && empty($depart_street_no_err && $departure_date_err && $departure_time_err && $dest_city_err && $dest_street_err && $dest_street_no_err && $arrival_time_err && $available_seats_err)) {
+    if (empty($depart_city_err) && empty($depart_street_err) && empty($depart_street_no_err) && empty($departure_date_err) 
+        && empty($departure_time_err) && empty($dest_city_err) && empty($dest_street_err) && empty($dest_street_no_err) && empty($arrival_time_err) && empty($available_seats_err)) {
 
         // Prepare an insert statement
         $sql = "INSERT INTO Ride (arrival_time, departure_date, departure_time, available_seats, employee_id,
@@ -124,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Set parameters
             $param_arrival_time = $arrival_time;
-            $param_departure_date = $departure_date;
+            $param_departure_date = date("Y-m-d", strtotime($departure_date));
             $param_departure_time = $departure_time;
             $param_available_seats = $available_seats;
             $param_employee_id = $_SESSION['employee_id'];
