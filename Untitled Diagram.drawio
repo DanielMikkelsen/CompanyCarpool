@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-01T15:34:45.685Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="adES5wtZy5mc8DTBtlbD" version="13.10.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-01T16:31:16.984Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="2c3Bwd3VuateEesJg1Eo" version="13.10.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1420" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1671" dy="886" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -15,7 +15,7 @@
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--2" value="DatoForAktivering: DateTime [0...1]" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="52" width="330" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--3" value="DatoForAnnulleret: DateTime [0...1]&#xa;&#xa;DatoForAnbringelse: DateTime [0...1]&#xa;&#xa;DatoForFoersteUdarbejdelse: DateTime [0...1]&#xa;&#xa;FoerstKommendeOpfoelgningsDato: DateTime [0...1]&#xa;&#xa;Status: ForaeldrehandleplanStatus = Kladde&#xa;&#xa;Titel: string&#xa;&#xa;Version: int&#xa;&#xa;OpfoelgendePaaTidligere: boolean&#xa;&#xa;DatoForOpfoelgendePaaTidligere: DateTime [0...1]&#xa;&#xa;UdarbejdetAndreForaeldrehandleplanerParagraf54: boolean" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+        <mxCell id="zkfFHV4jXpPFQw0GAbJ--3" value="DatoForAnnulleret: DateTime [0...1]&#xa;&#xa;DatoForAnbringelse: DateTime [0...1]&#xa;&#xa;DatoForFoersteUdarbejdelse: DateTime [0...1]&#xa;&#xa;FoerstKommendeOpfoelgningsDato: DateTime [0...1]&#xa;&#xa;Status: ForaeldrehandleplanStatus = Kladde&#xa;&#xa;Titel: string&#xa;&#xa;Version: int&#xa;&#xa;OpfoelgendePaaTidligere: boolean&#xa;&#xa;DatoForOpfoelgendePaaTidligere: DateTime [0...1]&#xa;&#xa;UdarbejdetAndreForaeldrehandleplanerParagraf54: boolean&#xa;&#xa;AnbringelsesYdelseId: Ydelse_id" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="78" width="330" height="422" as="geometry" />
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--17" value="Mål" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -53,6 +53,18 @@
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-12" value="IgangsaettelsesDato: DateTime [0...1]&#xa;&#xa;LovpligtigOpfoelgningsDato: DateTime [0...1]&#xa;&#xa;ManuelOpfoelgningsDato: DateTime [0...1]&#xa;&#xa;Nyoprettet: boolean&#xa;&#xa;Opfoelges: boolean&#xa;&#xa;OpfoelgningsDato: DateTime [0...1]&#xa;&#xa;Ophoerer: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="28fEjChyB_LKOJg9PjXu-9">
           <mxGeometry y="78" width="310" height="302" as="geometry" />
+        </mxCell>
+        <mxCell id="28fEjChyB_LKOJg9PjXu-13" value="Ydelse" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="615" y="560" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="28fEjChyB_LKOJg9PjXu-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;exitX=1.006;exitY=0.881;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--3" target="28fEjChyB_LKOJg9PjXu-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="28fEjChyB_LKOJg9PjXu-16" value="0...*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="575" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="28fEjChyB_LKOJg9PjXu-17" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="450" y="575" width="20" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
