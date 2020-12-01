@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-01T16:54:22.457Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="4EH2Tdim0kdv6zARXjre" version="13.10.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-01T16:54:53.019Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="YHumJ6RFO_01GdP0BEn6" version="13.10.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1671" dy="886" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -64,16 +64,16 @@
           <mxGeometry x="640" y="469" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-17" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="450" y="448" width="20" height="20" as="geometry" />
+          <mxGeometry x="450" y="550" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-18" value="+ Anbringelse_Ydelse" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="570" y="454" width="130" height="20" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-19" value="Anbringelse_Ydelse" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="445" y="473" width="120" height="20" as="geometry" />
+          <mxGeometry x="450" y="575" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-22" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=-0.003;exitY=0.976;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--3" target="28fEjChyB_LKOJg9PjXu-9">
-          <mxGeometry x="-0.9588" y="-10" relative="1" as="geometry">
+          <mxGeometry x="-0.7816" y="-20" relative="1" as="geometry">
             <mxPoint x="120" y="670" as="sourcePoint" />
             <mxPoint x="350" y="680" as="targetPoint" />
             <mxPoint as="offset" />
