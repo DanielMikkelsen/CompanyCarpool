@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-02T15:45:13.877Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="HTDWjVXvm73NFVIx6oal" version="13.10.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-02T15:49:02.195Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="c6DyDhJmJTipehn-dTtU" version="13.10.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -17,14 +17,6 @@
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--3" value="DatoForAnnulleret: DateTime [0...1]&#xa;&#xa;DatoForAnbringelse: DateTime [0...1]&#xa;&#xa;DatoForFoersteUdarbejdelse: DateTime [0...1]&#xa;&#xa;FoerstKommendeOpfoelgningsDato: DateTime [0...1]&#xa;&#xa;Status: ForaeldrehandleplanStatus = Kladde&#xa;&#xa;Titel: string&#xa;&#xa;Version: int&#xa;&#xa;OpfoelgendePaaTidligere: boolean&#xa;&#xa;DatoForOpfoelgendePaaTidligere: DateTime [0...1]&#xa;&#xa;UdarbejdetAndreForaeldrehandleplanerParagraf54: boolean&#xa;&#xa;AnbringesesDatoManuelt: boolean?&#xa;&#xa;ForaeldreJaTilStoetteperson: boolean?&#xa;&#xa;SkalForaeldreModtageStoette: boolean?&#xa;&#xa;AftalerForSamarbejdeStoette: string&#xa;&#xa;OverordnetFormaal: string&#xa;&#xa;SamtykkeTilUdlevering: boolean?&#xa;&#xa;SamtykkeTilUdleveringBeskrivelse: string&#xa;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="78" width="330" height="562" as="geometry" />
-        </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--17" value="Maal" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="610" y="10" width="210" height="216" as="geometry">
-            <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="zkfFHV4jXpPFQw0GAbJ--18" value="AnsvarKonkretAftale: string&#xa;&#xa;Beskrivelse: string&#xa;&#xa;KanOpfoelges: boolean&#xa;&#xa;KonkretMaal: string&#xa;&#xa;MaalsaetningsDato: DateTime [0...1]&#xa;&#xa;MaalType: MaalType" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--17" vertex="1">
-          <mxGeometry y="26" width="210" height="174" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-5" value="0...*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="560" y="120" width="40" height="20" as="geometry" />
@@ -71,10 +63,10 @@
           <mxGeometry x="670" y="430" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-18" value="+ Anbringelse_Ydelse" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="560" y="400" width="130" height="20" as="geometry" />
+          <mxGeometry x="445" y="390" width="130" height="20" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-19" value="Anbringelse_Ydelse" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="440" y="450" width="120" height="20" as="geometry" />
+          <mxGeometry x="550" y="430" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="28fEjChyB_LKOJg9PjXu-22" value="1" style="endArrow=open;html=1;endSize=9;startArrow=diamondThin;startSize=22;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;strokeWidth=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--3" target="28fEjChyB_LKOJg9PjXu-9" edge="1">
           <mxGeometry x="-0.6364" y="-15" relative="1" as="geometry">
@@ -116,10 +108,10 @@
         <mxCell id="9ykUOfUkJz-qrRqov1TA-9" value="Person" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="440" y="890" width="100" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="28fEjChyB_LKOJg9PjXu-4" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=20;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--3" target="zkfFHV4jXpPFQw0GAbJ--17" edge="1">
+        <mxCell id="28fEjChyB_LKOJg9PjXu-4" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=20;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--3" edge="1">
           <mxGeometry x="-1" y="3" relative="1" as="geometry">
             <mxPoint x="460" y="117" as="sourcePoint" />
-            <mxPoint x="560" y="117" as="targetPoint" />
+            <mxPoint x="610" y="118" as="targetPoint" />
             <Array as="points">
               <mxPoint x="450" y="118" />
               <mxPoint x="450" y="118" />
@@ -154,6 +146,9 @@
         </mxCell>
         <mxCell id="9ykUOfUkJz-qrRqov1TA-21" value="Vi tilføjer et felt &#39;MedtagOpgaveBehandler&#39; her. I øjeblikket har alle Opgaver på nær Handleplan dette felt, men da dette ændres, kan vi passende tilføje feltet til superklassen for dem.&lt;br&gt;Medtag-felterne fra de øvrige opgaver udgår derfor. NB dette er ikke LIS-felter" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="640" y="560" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="u2CqwiWk5ftXd2ka0euZ-0" value="Maal" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="610" y="70" width="120" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
