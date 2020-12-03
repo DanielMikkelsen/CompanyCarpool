@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-03T10:10:02.855Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="I6uFwPgG2Zb2P_bxA0M4" version="13.10.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-03T10:24:09.399Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="TDvjz42XBrVdMFS026fk" version="13.10.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -114,10 +114,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="9ykUOfUkJz-qrRqov1TA-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;startSize=20;endArrow=none;endFill=0;endSize=9;strokeColor=#000000;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="9ykUOfUkJz-qrRqov1TA-21" target="9ykUOfUkJz-qrRqov1TA-18" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="620" />
+              <mxPoint x="760" y="620" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="9ykUOfUkJz-qrRqov1TA-21" value="Vi tilføjer et felt &#39;MedtagOpgaveBehandler&#39; her. I øjeblikket har alle Opgaver på nær Handleplan dette felt, men da dette ændres, kan vi passende tilføje feltet til superklassen for dem.&lt;br&gt;Medtag-felterne fra de øvrige opgaver udgår derfor. NB dette er ikke LIS-felter" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="640" y="632" width="180" height="170" as="geometry" />
+        <mxCell id="9ykUOfUkJz-qrRqov1TA-21" value="&lt;br&gt;&lt;br&gt;We add a field called &#39;MedtagOpgaveBehandler&#39; (boolean) to Opgave and remove the &#39;Medtag(...)&#39; fields from all Opgave types currently having it (BFU, BHU, UFU, IndstillingTilUKN), and refer them to this new field on Opgave instead, and also include it to Handleplan and Foraeldrehandleplan" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="640" y="631" width="180" height="182" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u2CqwiWk5ftXd2ka0euZ-0" target="RDVD3dFAGIyzIFyo6bfh-0">
           <mxGeometry relative="1" as="geometry" />
@@ -138,8 +143,8 @@
             <mxPoint x="555" y="502" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-5" value="*:*, eftersom det gør fællesfunktionaliteten nemmere at implementere senere. Constrain med én ydelse per forældrehandleplan" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="460" y="392" width="170" height="80" as="geometry" />
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-5" value="Constrain to one Forældrehandleplan for each Ydelse" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="455" y="392" width="170" height="80" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.45;entryY=0.98;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-8" target="28fEjChyB_LKOJg9PjXu-11">
           <mxGeometry relative="1" as="geometry">
@@ -161,26 +166,22 @@
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-14">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="260" y="767" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="767" />
+              <mxPoint x="200" y="767" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-14" value="Constrain med én Forældrehandleplan per indsats" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="20" y="732" width="130" height="70" as="geometry" />
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-14" value="Constrain to one Forældrehandleplan for each Foraeldrehandleplanindsats" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="20" y="724" width="160" height="78" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-16">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="525" y="241" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-16" value="Constrain med én Forældrehandleplan per mål" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-16" value="Constrain to one Forældrehandleplan for each ForaeldreMaal" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="460" y="276" width="130" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-18">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="250" y="910" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-18" value="Bemærk, indsats er en komposition af Handleplan: Konsekvenser?" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="20" y="900" width="150" height="80" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-21" target="RDVD3dFAGIyzIFyo6bfh-22">
           <mxGeometry relative="1" as="geometry" />
@@ -254,8 +255,21 @@
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-44" value="HandleplanindsatsHandleplanindsats" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="459.5" y="1470" width="230.5" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="1500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-45" value="constrain to 1:*" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="10" y="1460" width="100" height="100" as="geometry" />
+          <mxGeometry y="1450" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-46" target="RDVD3dFAGIyzIFyo6bfh-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="1880" />
+              <mxPoint x="130" y="1885" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-46" value="constrain to 1:*" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="10" y="1830" width="100" height="100" as="geometry" />
