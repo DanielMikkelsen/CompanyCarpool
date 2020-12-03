@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-03T09:45:06.854Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="HEyBIRPaF5pxvEdOu0_d" version="13.10.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-03T10:05:10.258Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="phHQ3GApAid4pXv9RDKb" version="13.10.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1673" dy="886" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -181,6 +181,66 @@
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-18" value="Bemærk, indsats er en komposition af Handleplan: Konsekvenser?" style="shape=note;size=20;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="20" y="900" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-21" target="RDVD3dFAGIyzIFyo6bfh-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-21" target="RDVD3dFAGIyzIFyo6bfh-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-21" value="HandleplanindsatsBase&lt;br&gt;{abstract}" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="1240" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-22" target="RDVD3dFAGIyzIFyo6bfh-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-22" value="Foraeldreindsats" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="199" y="1390" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.419;entryY=-0.038;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-23" target="RDVD3dFAGIyzIFyo6bfh-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-23" value="Handleplanindsats" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="1400" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-24" value="Foraeldrehandleplan" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="199" y="1540" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-25" value="Handleplanindsats" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="455" y="1550" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-32" target="RDVD3dFAGIyzIFyo6bfh-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-32" target="RDVD3dFAGIyzIFyo6bfh-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-32" value="MaalBase&lt;br&gt;{abstract}" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="305" y="1630" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-34" target="RDVD3dFAGIyzIFyo6bfh-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-34" value="ForaeldreMaal" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="184" y="1780" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.419;entryY=-0.038;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-36" target="RDVD3dFAGIyzIFyo6bfh-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-36" value="HandleplanMaal" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="425" y="1790" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-37" value="Foraeldrehandleplan" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="184" y="1930" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-38" value="Handleplanindsats" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="1940" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-39" target="RDVD3dFAGIyzIFyo6bfh-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-39" value="Ydelse" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="675" y="1400" width="110" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
