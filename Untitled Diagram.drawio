@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-03T10:24:59.181Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="jJ-3Vl5H5hblEsuljLAt" version="13.10.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-03T10:25:38.007Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="swCZrkcKPwVktbZGVMlr" version="13.10.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -121,8 +121,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="9ykUOfUkJz-qrRqov1TA-21" value="&lt;br&gt;&lt;br&gt;We add a field called &#39;MedtagOpgaveBehandler&#39; (boolean) to Opgave and remove the &#39;Medtag(...)&#39; fields from all Opgave types currently having it (BFU, BHU, UFU, IndstillingTilUKN), and refer them to this new field on Opgave instead, and also include it to Handleplan and Foraeldrehandleplan" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="640" y="631" width="180" height="182" as="geometry" />
+        <mxCell id="9ykUOfUkJz-qrRqov1TA-21" value="We add a field called &#39;MedtagOpgaveBehandler&#39; (boolean) to Opgave and remove the &#39;Medtag(...)&#39; fields from all Opgave types currently having it (BFU, BHU, UFU, IndstillingTilUKN), and refer them to this new field on Opgave instead, and also include it to Handleplan and Foraeldrehandleplan" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="640" y="631" width="180" height="169" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="u2CqwiWk5ftXd2ka0euZ-0" target="RDVD3dFAGIyzIFyo6bfh-0">
           <mxGeometry relative="1" as="geometry" />
