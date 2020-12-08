@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-08T15:11:41.106Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="TiZmN_gvtd7znnDFbUFK" version="13.10.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-08T15:12:35.065Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="8hS5QjBj6oMsM8i6tuMx" version="13.10.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -204,7 +204,7 @@
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-23" value="Handleplanindsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="440" y="1400" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-24" value="Foraeldrehandleplan" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-24" value="Indsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="199" y="1540" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-25" value="Handleplanindsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -231,10 +231,10 @@
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-36" value="HandleplanMaal" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="465" y="1790" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-37" value="Foraeldrehandleplan" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-37" value="Maal" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="224" y="1930" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="RDVD3dFAGIyzIFyo6bfh-38" value="Handleplanindsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="RDVD3dFAGIyzIFyo6bfh-38" value="Maal" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="480" y="1940" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-39" target="RDVD3dFAGIyzIFyo6bfh-23" edge="1">
