@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-08T15:22:24.069Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="ahZ5F55WN3-J7S-BISyH" version="13.10.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-08T15:24:03.865Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="bdHv2gcY4T6Nfyu_5jxN" version="13.10.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2249" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -190,40 +190,45 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-21" value="HandleplanindsatsBase&lt;br&gt;{abstract}&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&amp;nbsp;AndreUddybning:&amp;nbsp;&lt;span&gt;string&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&amp;nbsp;ForventetVarighed: string&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;IgangsaettelsesDato: DateTime[0...1]&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;Igangvaerende: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;LovpligtigOpfoelgninsdato: DateTime[0..1]&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;ManuelOpfoelgningDato: DateTime[0...1]&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;NyOprettet: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;Opfoelges: boolean&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&amp;nbsp;OpfoelgningsDato: DateTime[0..1]&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;Opfulgt: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp;Ophoerer: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="320" y="1170" width="220" height="270" as="geometry" />
+          <mxGeometry x="320" y="1200" width="220" height="270" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-22" target="RDVD3dFAGIyzIFyo6bfh-24" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-22" value="Foraeldreindsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="189" y="1530" width="110" height="50" as="geometry" />
+          <mxGeometry x="249" y="1550" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.419;entryY=-0.038;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-23" target="RDVD3dFAGIyzIFyo6bfh-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-23" value="Handleplanindsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="410" y="1540" width="130" height="70" as="geometry" />
+          <mxGeometry x="470" y="1560" width="130" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-24" value="Indsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="189" y="1680" width="110" height="50" as="geometry" />
+          <mxGeometry x="249" y="1700" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-25" value="Handleplanindsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="430" y="1690" width="110" height="50" as="geometry" />
+          <mxGeometry x="490" y="1710" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-32" target="RDVD3dFAGIyzIFyo6bfh-34" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="443" y="1960" />
+              <mxPoint x="369" y="1960" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=block;startFill=1;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-32" target="RDVD3dFAGIyzIFyo6bfh-36" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-32" value="MaalBase&lt;br&gt;{abstract}&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;AnsvarKonkretAftale: string&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;Beskrivelse: string&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;KanOpfeolges: boolean&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;KonkretMaal: string&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;MaalsaetningsDato: DateTime[0...1]&lt;/span&gt;&lt;/div&gt;" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="445" y="2010" width="195" height="210" as="geometry" />
+          <mxGeometry x="345" y="1800" width="195" height="110" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-34" target="RDVD3dFAGIyzIFyo6bfh-37" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-34" value="ForaeldreMaal" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="314" y="2320" width="110" height="50" as="geometry" />
+          <mxGeometry x="314" y="2019" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.419;entryY=-0.038;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-36" target="RDVD3dFAGIyzIFyo6bfh-38" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -232,47 +237,47 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-36" value="HandleplanMaal&lt;br&gt;&lt;br&gt;Faelles: boolean&lt;br&gt;MaalType: MaalType" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="480" y="2338" width="125" height="60" as="geometry" />
+          <mxGeometry x="470" y="2008" width="125" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-37" value="Maal" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="314" y="2470" width="110" height="50" as="geometry" />
+          <mxGeometry x="314" y="2169" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-38" value="Maal" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="495" y="2488" width="110" height="50" as="geometry" />
+          <mxGeometry x="485" y="2158" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-39" target="RDVD3dFAGIyzIFyo6bfh-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-39" value="Ydelse" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="590" y="1550" width="110" height="50" as="geometry" />
+          <mxGeometry x="650" y="1570" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-41" value="ForaeldreMaalForaeldrehandleplan" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="231" y="2400" width="205" height="50" as="geometry" />
+          <mxGeometry x="231" y="2099" width="205" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-42" value="HandleplanMaalHandleplanindsats" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="495" y="2408" width="190" height="50" as="geometry" />
+          <mxGeometry x="485" y="2078" width="190" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-43" value="ForaeldreindsatsForaeldrehandleplan" style="html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="110.5" y="1610" width="205" height="50" as="geometry" />
+          <mxGeometry x="170.5" y="1630" width="205" height="50" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-45" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="110" y="1640" as="targetPoint" />
+            <mxPoint x="170" y="1660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-45" value="constrain to 1:*" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-10" y="1590" width="100" height="100" as="geometry" />
+          <mxGeometry x="50" y="1610" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;startSize=17;endArrow=none;endFill=0;targetPerimeterSpacing=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RDVD3dFAGIyzIFyo6bfh-46" target="RDVD3dFAGIyzIFyo6bfh-41" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="200" y="2425" />
-              <mxPoint x="200" y="2425" />
+              <mxPoint x="200" y="2124" />
+              <mxPoint x="200" y="2124" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="RDVD3dFAGIyzIFyo6bfh-46" value="constrain to 1:*" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="90" y="2370" width="100" height="100" as="geometry" />
+          <mxGeometry x="90" y="2069" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="VfblxxWLbB64fd1tGs7S-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--3" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -289,7 +294,7 @@
           <mxGeometry x="50" y="110" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="qxiiVELSqe2rZU6j_dC3-0" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;&lt;/i&gt;enumeration&lt;i&gt;&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;b&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;MaalType&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="660" y="2349" width="125" height="38" as="geometry" />
+          <mxGeometry x="650" y="2019" width="125" height="38" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
